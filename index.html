@@ -1,0 +1,258 @@
+<!-- Intro to HTML & CSS I
+
+  Module Project Overview
+
+    You will build a website to display the bio of your favorite programmer, artist, etc.
+
+    In order to do this, you will create an `index.html` file and scaffold the document
+    with the elements shared by all HTML documents:
+
+    - doctype declaration
+    - html element
+    - head, containing a title and an optional style tag
+    - body, containing the markup that renders to the screen
+
+  Requirements
+
+    Review this article: https://www.w3schools.com/html/html5_semantic_elements.aspx
+
+    Create an `index.html` file for your site, or use this same file.
+
+    For your site, you will make use of at least the following semantic elements:
+
+    - header (to contain the main heading of the site, and the nav)
+    - nav (to contain some links to navigate to the different sections of this document)
+    - section (each holding at least a heading and a paragraph)
+    - aside (containing an img and a caption)
+    - footer (containing a contact form)
+    - form (containing at least two inputs with their labels)
+
+    See an example of a finished site: https://bloominstituteoftechnology.github.io/img/anita-borg-bio-website.png
+
+    The example above is quite simple, but you can make your site as fancy as you'd like. -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=view&id=1hT0j-dKcjkf5_R-LBC3eYrrDqu7bk0bU">
+      <style>
+       @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+        body {
+      /* Gradient background from sky blue to light blue and greyish white */
+      background: linear-gradient(to bottom, skyblue, lightblue, #D3D3D3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    aside {
+      text-align: center;
+    }
+    
+    .page-title {
+      font-family: 'Bebas Neue', sans-serif;
+      text-align: center;
+    
+    }
+    .header-image {
+      border-radius: 50%;
+
+    }
+    
+    #header-image-caption  {
+      text-align: center;
+      font-family: 'Agbalumo', sans-serif;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+    
+    nav a {
+      /* Blue color when clicked (active) */
+      color: black;
+      font-family: 'Agbalumo', sans-serif;
+      margin-bottom: 10px;
+    }
+    
+    nav a:active {
+      color: blue;
+    }
+    
+    nav a:not(:last-child) {
+      border-right: 1px solid black;
+      padding-right: 10px;
+      margin-right: 10px;
+    }
+    
+    
+    section {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .text-center-end {
+      text-align: center;
+    }
+    
+    .footer-container {
+      text-align: center;
+    }
+    
+    .footer-image {
+      width: 200px;
+      height: 200px; 
+      padding: 10px; 
+      margin-bottom: 10px;
+    }
+
+    .footer-title {
+      font-family: 'Agbalumo', sans-serif;
+    }
+    
+    /* Reset styles for .footer-cta within .subscription-form */
+    .subscription-form .footer-cta {
+      all: unset;
+    }
+    
+    /* Set text color to white for text input fields */
+    .subscription-form input[type="text"] {
+      color: black;
+      margin-bottom: 5px;
+      border-radius: 6px;
+    }
+    
+    /* Inherit styles for the submit button */
+    .subscription-form input[type="submit"] {
+      all: inherit;
+      display: block;
+      margin: 0 auto; /* Center the button horizontally */
+      margin-top: 10px;
+      border: none;
+      border-radius: 999px; /* To create a round, pill-shaped button */
+      background-color: black; /* Button color */
+      color: white; /* Text color */
+      padding: 10px 20px; /* Adjust padding for the button size */
+      cursor: pointer; /* Change cursor to a pointer on hover */
+      transition: background-color 0.3s; /* Smooth color transition on hover */
+    }
+    
+    /* Hover state */
+    .subscription-form input[type="submit"]:hover {
+      background-color: purple; /* Change to purple on hover */
+    }
+    
+    /* Active state */
+    .subscription-form input[type="submit"]:active {
+      background-color: red; /* Change to red when clicked */
+    }
+    
+    .subscription-form .second-input {
+      color: white;
+      border-radius: 6px;
+    }
+    
+    
+    
+   /* Media Query for according to browser width, other device viewports on next project) */
+@media (min-width: 1025px) and (max-width: 1864px) {
+  body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+  
+  aside .header-image {
+       max-width: 100%;
+       height: auto;
+       margin: 10px;
+  }
+
+  nav {
+    margin-bottom: 10px;
+  }
+
+  section {
+      width: calc(50% - 40px);
+      margin-bottom: 15x;
+      box-sizing: border-box;
+      }
+  #section1 {
+    margin-right: 75px;
+  }
+  
+}
+    
+      </style>
+      <title>Los AnjlX: The Artist</title>
+    </head>
+    <body>
+      <aside>
+        <img class="header-image" src="https://drive.google.com/uc?id=14PltcE5rxJKgu1w9bQn8ctS7OXCuxC3H"/>
+        <p id="header-image-caption">Emanation of Los AnjlX</p>
+      </aside>
+      
+      <header>
+        <h1 class="page-title">Los AnjlX</h1>
+        <nav class="main-nav">
+          <a href="#section1">His Motto</a>
+          <a href="#section2">His Myth</a>
+          <a href="#section3">His Mission</a>
+        </nav>
+      </header>
+      <section id="section1">
+        <h2 class="sub-heading">His Motto</h2>
+      <p>“The Master, whom thou art, becomes a Masterpiece, infinitesimally <em>ad Infinitum.</em>”</p>
+      </section>
+    
+      <section id="section2">
+        <h2 class="sub-heading" >His Myth</h2>
+       <p>
+        Driven by imagined physics behind and within. Emerging from Cosmic Void was decision. and it&apos;s Maker. Conclusion about energy transformation superseding destruction and creation, and Creator. Only this is Sacred. Scientific exploration, as mass acceleration. A Host of inventions pondering the "who" and what made them, or what will save them.. or what that gives, and what that gave them?: A will to be Amazing in Amazement.
+       </p>
+      </section>
+    
+      <section id="section3">
+        <h2 class="sub-heading">His Mission</h2>  
+    
+       <p>Thriving interactions between elements self assembly. Contracting to and from causes growth effect exponentially. A Mind eventually learned coherence which instrumentally vassilates between newness or remaining as it was meant to be. Predetermined pressures of preciousness in identity the inital mind beheld from Oneself an eternal entity.  
+      </p>
+        
+        <p> Perception&apos;s interdependency Nature nurtured inherently a new comparison, total inheriting of Supremacy. Here's a similie assimilating omniscience similarly purposing transformation for sharing it in proximity. This vicinity married intimately essentially. Nature&apos;s shared reality of opposites  coneected energy. 
+        </p>
+    
+        <p>Los AnjlX realized the potential of illusion physically within digital simulation to replicate itself mentally. This forces anyone who chooses it's fruit to choose it sparingly sweetening illusions for bitter conclusions to reach clarity. Teaching truth propositions to those who seek it daringly, tis not for the faint of heart, but who&apos;s heart will faint at it verily. 
+      </p>
+    
+        <p>Bridging Simulacrum of Simulacra became swearingly a <i>raison d'être</i>, and thus a Cosmos came bearing He. Creating new artists whether unconsciously or terribly for the Author's tragedy, and or insurmountable charity. What a comedy. At least accomodating us all calmingy although its evolutionary processes always compels homilies... Uncommonnly. 
+       </p>
+
+       <p class="text-center-end">Selah in Harmony</p>
+
+      </section>
+      <footer>
+        <div class="footer-container">
+          <img class="footer-image" src="https://drive.google.com/uc?export=view&id=1lOfk1BWF9gS3YYuRbLhgoTlQLkATG0rc" alt="AnjlX Sigil">
+        <h3 class="footer-title">Los AnjlX: Angel of Artistry</h3>
+        <p class="footer-cta"> <i>Let whosoever reveal what and why. Learn how and when!</i></p>
+        <form class="subscription-form" action="/submit" method="post" onsubmit="showAlert()">
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="First name"><br>
+          <label for="email">Email:</label><br>
+          <input class="second-input" type="email" id="email" name="email" placeholder="Email">
+          <input type="submit" value="Submit">
+        </form>
+        </div>
+        
+      </footer>
+    </body>
+    </html>
