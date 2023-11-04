@@ -1,36 +1,3 @@
-<!-- Intro to HTML & CSS I
-
-  Module Project Overview
-
-    You will build a website to display the bio of your favorite programmer, artist, etc.
-
-    In order to do this, you will create an `index.html` file and scaffold the document
-    with the elements shared by all HTML documents:
-
-    - doctype declaration
-    - html element
-    - head, containing a title and an optional style tag
-    - body, containing the markup that renders to the screen
-
-  Requirements
-
-    Review this article: https://www.w3schools.com/html/html5_semantic_elements.aspx
-
-    Create an `index.html` file for your site, or use this same file.
-
-    For your site, you will make use of at least the following semantic elements:
-
-    - header (to contain the main heading of the site, and the nav)
-    - nav (to contain some links to navigate to the different sections of this document)
-    - section (each holding at least a heading and a paragraph)
-    - aside (containing an img and a caption)
-    - footer (containing a contact form)
-    - form (containing at least two inputs with their labels)
-
-    See an example of a finished site: https://bloominstituteoftechnology.github.io/img/anita-borg-bio-website.png
-
-    The example above is quite simple, but you can make your site as fancy as you'd like. -->
-    <!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
@@ -99,6 +66,9 @@
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
+    }
+    .quoteOne, .quoteTwo  {
+      text-align: center;
     }
     .text-center-end {
       text-align: center;
@@ -180,15 +150,24 @@
   nav {
     margin-bottom: 10px;
   }
-
+ 
   section {
       width: calc(50% - 40px);
       margin-bottom: 15x;
       box-sizing: border-box;
       }
-  #section1 {
-    margin-right: 75px;
+
+  h2 {
+    text-align: center;
   }
+
+  @media screen and (min-width: 400px) {
+    h2, .sub-heading {
+    text-align: center;
+  }
+
+}
+
   
 }
     
@@ -211,29 +190,30 @@
       </header>
       <section id="section1">
         <h2 class="sub-heading">His Motto</h2>
-      <p>“The Master, whom thou art, becomes a Masterpiece, infinitesimally <em>ad Infinitum.</em>”</p>
+        <p class="quoteOne">"It from Bit, and Bit it from It!"</p>
+      <p class="quoteTwo">"I am I, but am I who the I <em>dares</em> to be!?”</p>
       </section>
     
       <section id="section2">
         <h2 class="sub-heading" >His Myth</h2>
        <p>
-        Driven by imagined physics behind and within. Emerging from Cosmic Void was decision. and it&apos;s Maker. Conclusion about energy transformation superseding destruction and creation, and Creator. Only this is Sacred. Scientific exploration, as mass acceleration. A Host of inventions pondering the "who" and what made them, or what will save them.. or what that gives, and what that gave them?: A will to be Amazing in Amazement.
+        Driven by imagined physics behind and within. Emerging from Cosmic Void was the decision. and it&apos;s Maker. Conclusion about energy transformation superseding destruction and creation, and Creator. Only this is Sacred. Scientific exploration, mass&apos; acceleration. A Host of inventions pondering the "who" and what made them, or what will save them.. for the what that gives, and then what that gave them?: A will fulfilled to be Amazed at Amazement.
        </p>
       </section>
     
       <section id="section3">
         <h2 class="sub-heading">His Mission</h2>  
     
-       <p>Thriving interactions between elements self assembly. Contracting to and from causes growth effect exponentially. A Mind eventually learned coherence which instrumentally vassilates between newness or remaining as it was meant to be. Predetermined pressures of preciousness in identity the inital mind beheld from Oneself an eternal entity.  
+       <p>Thriving interactions between elements self assembly. Contracting to and from causes our growth effect exponentially. A Mind eventually learned coherence, which instrumentally vassilates between newness or remaining as it was meant to be. Predetermined pressures of preciousness in identity the inital mind beheld from Oneself an eternal entity.  
       </p>
         
-        <p> Perception&apos;s interdependency Nature nurtured inherently a new comparison, total inheriting of Supremacy. Here's a similie assimilating omniscience similarly purposing transformation for sharing it in proximity. This vicinity married intimately essentially. Nature&apos;s shared reality of opposites  coneected energy. 
+        <p> Perception&apos;s interdependency Nature nurtured inherently a new comparison: total inheriting of Supremacy. Here's a similie assimilating omniscience similarly purposing transformation for sharing it in proximity. This vicinity married intimately essentially. Nature&apos;s shared reality of opposites connected energy. Singularity...
         </p>
     
-        <p>Los AnjlX realized the potential of illusion physically within digital simulation to replicate itself mentally. This forces anyone who chooses it's fruit to choose it sparingly sweetening illusions for bitter conclusions to reach clarity. Teaching truth propositions to those who seek it daringly, tis not for the faint of heart, but who&apos;s heart will faint at it verily. 
+        <p>Los AnjlX realized the potential of illusion physically within digital simulation to replicate itself mentally. This forces anyone who chooses it's fruit to choose it sparingly sweetening allusions with bitter conclusions to reach clarity. Teaching truth propositions to those who seek it daringly, tis not for the faint of heart, but who&apos;s heart will faint at it verily. 
       </p>
     
-        <p>Bridging Simulacrum of Simulacra became swearingly a <i>raison d'être</i>, and thus a Cosmos came bearing He. Creating new artists whether unconsciously or terribly for the Author's tragedy, and or insurmountable charity. What a comedy. At least accomodating us all calmingy although its evolutionary processes always compels homilies... Uncommonnly. 
+        <p>Bridging Simulacrum of Simulacra became glaringly a <i>raison d'être</i>, and thus a Cosmos came bearing Me. Creating new artists whether unconsciously or terribly for the Author's tragedy, and or insurmountable charity. What, Comedy?
        </p>
 
        <p class="text-center-end">Selah in Harmony</p>
